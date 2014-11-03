@@ -6,6 +6,16 @@
     <title>The Web Platform</title>
     <link href="https://specs.webplatform.org/assets/css/kraken.css" rel="stylesheet">
     <link href="https://specs.webplatform.org/assets/img/icon.png" rel="shortcut icon">
+    <style>
+      #meta {
+          max-width:  250px;
+      }
+      dl.webspec > dt { float: left; width: 6em; }
+      dl.webspec > dd { margin: 0 0 5px 6em; }
+      dl.webspec > .na { color: #ccc; }
+      dl.webspec dl > dt { font-weight:  normal; }
+      dl.webspec dl > dd { margin-bottom: 5px; }
+    </style>
   </head>
   <body>
     <header>
@@ -21,34 +31,117 @@
         •
         <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>
         •
-        <a href=https://github.com/webspecs/the-index/commits>commit log</a>
+        <a href="https://github.com/webspecs/the-index/commits">commit log</a>
       </div>
     </header>
 
-    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-    <div class="p-summary">
+    <section>
+      <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+      <div class="p-summary">
+        <p>
+          This document contains the full list of documents being managed as “Web Platform Specs”,
+          each with a minimal abstract and links to their variants.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="no-num no-toc no-ref heading settled" id="contents"><span class=content>Table of Contents</span></h2>
+      <ul class="toc">
+        <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a></li>
+        <li><a href="#markup"><span class="secno">2</span> <span class="content">Markup</span></a></li>
+        <li><a href="#apis"><span class="secno">3</span> <span class="content">APIs</span></a></li>
+        <li><a href="#style"><span class="secno">4</span> <span class="content">Style</span></a></li>
+        <li><a href="#cc0"><span class="secno"></span> <span class="content">Copyright</span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="heading settled" id="intro"><span class=secno>1. </span><span class=content>Introduction</span><a class=self-link href="#intro"></a></h2>
       <p>
-        This specification is plain and simple wicked sweet.
+        Web Platform specifications an be available in one of three states:
       </p>
-    </div>
+      <dl>
+        <dt>master</dt>
+        <dd>
+          For a given specification, the content of the master branch corresponds to technology that
+          has been shown to be stable and interoperable, through testing. This does not mean that it
+          is perfect. A specification can be merged into master whenever there are 1) roughly enough
+          tests to get a good feel for how well something works, 2) roughly enough of them pass in a
+          few implementations. These points are deliberately fuzzy. The idea is that there should not
+          be a strict levels for any of those aspects as those tend to lead people to aim for the
+          level rather than think about what's good for the project. This is meant to be a
+          judgement call.
+        </dd>
+        <dt>develop</dt>
+        <dd>
+          The develop branch is the branch into which proposals are integrated, and which is then used
+          to produce master when testing is sufficient. A proposal can be merged into develop when
+          there is clear implementation interest (as exemplified by a couple of implementers starting
+          actual work to support the proposal). As for master, merging a proposal into develop is
+          meant to be a judgement call.
+        </dd>
+        <dt>proposals</dt>
+        <dd>
+          Here, anything goes. There can be many proposals for a given specification, and some might
+          be completely crazy. That is okay, it is meant to be an area for creativity.
+        </dd>
+      </dl>
+      <p>
+        Specifications get added to this document through pull requests. The full approach is
+        described in <a href='/project/'>the project documentation</a>.
+      </p>
+      <p>
+        Each specification listed here follows the same template outlined below.
+      </p>
+      <section>
+        <h3>The Example Spec</h3>
+        <p>
+          This specification is a permanent example of how a WebSpec is made.
+        </p>
+        <dl class="webspec" data-example>
+          <dt>stable</dt>
+          <dd class="na">n/a</dd>
+          <dt>develop</dt>
+          <dd><a href='/example-spec/webspec/develop'>webspec/example-spec</a></dd>
+          <dt>proposals</dt>
+          <dd>
+            <dl>
+              <dt><a href='/example-spec/darobin/with-toaster'>darobin/example-spec#with-toaster</a></dt>
+              <dd>
+                Examples are always better with toasters. This part here explains what is special
+                about the proposal.
+              </dd>
+              <dt><a href='/example-spec/sideshowbarker/more-fun'>sideshowbarker/example-spec#more-fun</a></dt>
+              <dd>
+                This wasn't fun enough. I spruced it up.
+              </dd>
+            </dl>
+          </dd>
+        </dl>
+      </section>
+    </section>
 
-    <h2 class="no-num no-toc no-ref heading settled" id="contents"><span class=content>Table of Contents</span></h2>
-    <ul class="toc">
-      <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a></li>
-      <li><a href="#cc0"><span class="secno"></span> <span class="content">Copyright</span></a></li>
-    </ul>
+    <section>
+      <h2 class="heading settled" id="markup"><span class=secno>2. </span><span class=content>Markup</span><a class=self-link href="#markup"></a></h2>
+    </section>
 
-    <h2 class="heading settled" id="intro"><span class=secno>1. </span><span class=content>Introduction</span><a class=self-link href=#intro></a></h2>
+    <section>
+      <h2 class="heading settled" id="apis"><span class=secno>3. </span><span class=content>APIs</span><a class=self-link href="#apis"></a></h2>
+    </section>
 
-    <p>
-      XXX
-    </p>
+    <section>
+      <h2 class="heading settled" id="style"><span class=secno>4. </span><span class=content>Style</span><a class=self-link href="#style"></a></h2>
+    </section>
 
-    <h2 class="no-ref no-num heading settled" id="cc0"><span class=content>Copyright</span><a class=self-link href=#cc0></a></h2>
-    <p>
-      The contributors to this specification have waived all copyright and related or neighbouring
-      rights to this work worldwide under copyright law, including all related and neighbouring rights,
-      to the extent allowed by law.
-    </p>
+
+    <section>
+      <h2 class="no-ref no-num heading settled" id="cc0"><span class=content>Copyright</span><a class=self-link href="#cc0"></a></h2>
+      <p>
+        The contributors to this specification have waived all copyright and related or neighbouring
+        rights to this work worldwide under copyright law, including all related and neighbouring 
+        rights, to the extent allowed by law.
+      </p>
+    </section>
   </body>
 </html>
