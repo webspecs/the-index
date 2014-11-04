@@ -91,35 +91,35 @@
         Specifications get added to this document through pull requests. The full approach is
         described in <a href='/project/'>the project documentation</a>.
       </p>
-      <p>
-        Each specification listed here follows the same template outlined below.
-      </p>
-      <section>
-        <h3>The Example Spec</h3>
-        <p>
-          This specification is a permanent example of how a WebSpec is made.
-        </p>
-        <dl class="webspec" data-example>
-          <dt>master</dt>
-          <dd class="na">n/a</dd>
-          <dt>develop</dt>
-          <dd><a href='/example-spec/webspecs/develop'>webspecs/example-spec</a></dd>
-          <dt>proposals</dt>
-          <dd>
-            <dl>
-              <dt><a href='/example-spec/darobin/with-toaster'>darobin/example-spec#with-toaster</a></dt>
-              <dd>
-                Examples are always better with toasters. This part here explains what is special
-                about the proposal.
-              </dd>
-              <dt><a href='/example-spec/sideshowbarker/more-fun'>sideshowbarker/example-spec#more-fun</a></dt>
-              <dd>
-                This wasn't fun enough. I spruced it up.
-              </dd>
-            </dl>
-          </dd>
-        </dl>
-      </section>
+      <div class=example>
+          Each specification listed here follows the same template outlined below.
+          <pre>
+&lt;section&gt;
+  &lt;h3&gt;The Example Spec&lt;/h3&gt;
+  &lt;p&gt;
+    This specification is a permanent example of how a WebSpec is made.
+  &lt;/p&gt;
+  &lt;script type=&quot;application/webspec+json&quot;&gt;
+  {
+    "master":   null
+  , "develop":  null
+  , "proposals": [
+      {
+        "repository":   &quot;darobin/example-spec&quot;
+      , "branch":       &quot;with-toaster&quot;
+      , "description":  &quot;Examples are always better with toasters. This part here explains what is special about the proposal.&quot;
+      }
+    , {
+        "repository":   &quot;sideshowbarker/example-spec&quot;
+      , "branch":       &quot;more-fun&quot;
+      , "description":  &quot;This wasn&#x27;t fun enough. I spruced it up.&quot;
+      }
+    ]
+  }
+  &lt;/script&gt;
+&lt;/section&gt;
+        </pre>
+      </div>
     </section>
 
     <section>
@@ -131,24 +131,21 @@
         </p>
         <!--
           XXX
-          - Should generate these from embedded JSON
           - the ToC should also be generated
         -->
-        <dl class="webspec">
-          <dt>master</dt>
-          <dd class="na">n/a</dd>
-          <dt>develop</dt>
-          <dd class="na">n/a</dd>
-          <dt>proposals</dt>
-          <dd>
-            <dl>
-              <dt><a href='/example-spec/webspecs/gh-pages'>webspecs/example-spec#gh-pages</a></dt>
-              <dd>
-                gh-pages, don't use that.
-              </dd>
-            </dl>
-          </dd>
-        </dl>
+        <script type="application/webspec+json">
+        {
+          "master":   null
+        , "develop":  null
+        , "proposals": [
+            {
+              "repository":   "darobin/example-spec"
+            , "branch":       "gh-pages"
+            , "description":  "The example spec. <strong>Don't</strong> use gh-pages as was done here."
+            }
+          ]
+        }
+        </script>
       </section>
     </section>
 
@@ -169,5 +166,6 @@
         rights, to the extent allowed by law.
       </p>
     </section>
+    <script src='index.js'></script>
   </body>
 </html>
