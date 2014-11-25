@@ -51,69 +51,7 @@
     </section>
 
     <section>
-      <h2 id="intro">Introduction</h2>
-      <p>
-        Web Platform specifications an be available in one of three states:
-      </p>
-      <dl>
-        <dt>master</dt>
-        <dd>
-          For a given specification, the content of the master branch corresponds to technology that
-          has been shown to be stable and interoperable, through testing. This does not mean that it
-          is perfect. A specification can be merged into master whenever there are 1) roughly enough
-          tests to get a good feel for how well something works, 2) roughly enough of them pass in a
-          few implementations. These points are deliberately fuzzy. The idea is that there should not
-          be a strict levels for any of those aspects as those tend to lead people to aim for the
-          level rather than think about what's good for the project. This is meant to be a
-          judgement call.
-        </dd>
-        <dt>develop</dt>
-        <dd>
-          The develop branch is the branch into which proposals are integrated, and which is then used
-          to produce master when testing is sufficient. A proposal can be merged into develop when
-          there is clear implementation interest (as exemplified by a couple of implementers starting
-          actual work to support the proposal). As for master, merging a proposal into develop is
-          meant to be a judgement call.
-        </dd>
-        <dt>proposals</dt>
-        <dd>
-          Here, anything goes. There can be many proposals for a given specification, and some might
-          be completely crazy. That is okay, it is meant to be an area for creativity.
-        </dd>
-      </dl>
-      <p>
-        Specifications get added to this document through pull requests. The full approach is
-        described in <a href='/project/'>the project documentation</a>.
-      </p>
-      <div class=example>
-          Each specification listed here follows the same template outlined below.
-          <pre>
-&lt;section&gt;
-  &lt;h3 id="example"&gt;The Example Spec&lt;/h3&gt;
-  &lt;p&gt;
-    This specification is a permanent example of how a WebSpec is made.
-  &lt;/p&gt;
-  &lt;script type=&quot;application/webspec+json&quot;&gt;
-  {
-    "master":   null
-  , "develop":  null
-  , "proposals": [
-      {
-        "repository":   &quot;darobin/example-spec&quot;
-      , "branch":       &quot;with-toaster&quot;
-      , "description":  &quot;Examples are always better with toasters. This part here explains what is special about the proposal.&quot;
-      }
-    , {
-        "repository":   &quot;sideshowbarker/example-spec&quot;
-      , "branch":       &quot;more-fun&quot;
-      , "description":  &quot;This wasn&#x27;t fun enough. I spruced it up.&quot;
-      }
-    ]
-  }
-  &lt;/script&gt;
-&lt;/section&gt;
-        </pre>
-      </div>
+      <h2 id="core">Core Foundations</h2>
     </section>
 
     <section>
@@ -156,6 +94,71 @@
       <h2 id="style">Style</h2>
     </section>
 
+    <section>
+      <h2 id="how" class="no-num no-ref">How this works</h2>
+      <p>
+        Web Platform specifications an be available in one of three states:
+      </p>
+      <dl>
+        <dt>master</dt>
+        <dd>
+          For a given specification, the content of the master branch corresponds to technology that
+          has been shown to be stable and interoperable, through testing. This does not mean that it
+          is perfect. A specification can be merged into master whenever there are 1) roughly enough
+          tests to get a good feel for how well something works, 2) roughly enough of them pass in a
+          few implementations. These points are deliberately fuzzy. The idea is that there should not
+          be a strict levels for any of those aspects as those tend to lead people to aim for the
+          level rather than think about what's good for the project. This is meant to be a
+          judgement call.
+        </dd>
+        <dt>develop</dt>
+        <dd>
+          The develop branch is the branch into which proposals are integrated, and which is then used
+          to produce master when testing is sufficient. A proposal can be merged into develop when
+          there is clear implementation interest (as exemplified by a couple of implementers starting
+          actual work to support the proposal). As for master, merging a proposal into develop is
+          meant to be a judgement call.
+        </dd>
+        <dt>proposals</dt>
+        <dd>
+          Here, anything goes. There can be many proposals for a given specification, and some might
+          be completely crazy. That is okay, it is meant to be an area for creativity.
+        </dd>
+      </dl>
+      <p>
+        Specifications get added to this document through pull requests. The full approach is
+        described in <a href='/docs/'>the project documentation</a>.
+      </p>
+      <div class=example>
+          Each specification listed here follows the same template outlined below.
+          <pre>
+&lt;section&gt;
+  &lt;h3 id="example"&gt;The Example Spec&lt;/h3&gt;
+  &lt;p&gt;
+    This specification is a permanent example of how a WebSpec is made.
+  &lt;/p&gt;
+  &lt;script type=&quot;application/webspec+json&quot;&gt;
+  {
+    "master":   null
+  , "develop":  null
+  , "proposals": [
+      {
+        "repository":   &quot;darobin/example-spec&quot;
+      , "branch":       &quot;with-toaster&quot;
+      , "description":  &quot;Examples are always better with toasters. This part here explains what is special about the proposal.&quot;
+      }
+    , {
+        "repository":   &quot;sideshowbarker/example-spec&quot;
+      , "branch":       &quot;more-fun&quot;
+      , "description":  &quot;This wasn&#x27;t fun enough. I spruced it up.&quot;
+      }
+    ]
+  }
+  &lt;/script&gt;
+&lt;/section&gt;
+        </pre>
+      </div>
+    </section>
 
     <section>
       <h2 class="no-ref no-num" id="cc0">Copyright</h2>
