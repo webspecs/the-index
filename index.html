@@ -29,7 +29,7 @@
         •
         <a href="https://github.com/webspecs/the-index">fork me</a>
         •
-        <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>
+        <a href="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231" rel="license">W3C</a>
         •
         <a href="https://github.com/webspecs/the-index/commits">commit log</a>
       </div>
@@ -86,10 +86,10 @@
         </p>
         <script type="application/webspec+json">
           {
-            "master":     null
-          , "develop":    "webspecs/url"
-          , "proposals":  null
-          , "fileName":   "url"
+            "webspecs/url#develop": {
+                "description":  "The current source of work on URL from Sam Ruby."
+            ,   "fileName":     "url"
+            }
           }
         </script>
       </section>
@@ -106,9 +106,9 @@
         </p>
         <script type="application/webspec+json">
           {
-            "master":     "webspecs/html-aria"
-          , "develop":    null
-          , "proposals":  null
+            "webspecs/html-aria#master": {
+                "description":  "Next generation iteration on ARIA in HTML from Steve Faulkner."
+            }
           }
         </script>
       </section>
@@ -121,9 +121,9 @@
         </p>
         <script type="application/webspec+json">
           {
-            "master":     "webspecs/SVG1.1-ARIA"
-          , "develop":    null
-          , "proposals":  null
+            "webspecs/SVG1.1-ARIA#master": {
+                "description":  "Initial proposal for ARIA in SVG from Steve Faulkner."
+            }
           }
         </script>
       </section>
@@ -135,14 +135,9 @@
         </p>
         <script type="application/webspec+json">
           {
-            "master":     null
-          , "develop":    null
-          , "proposals":  [
-              {
-                "branch":     "gh-pages"
-              , "repository": "darobin/html-ruby"
-              }
-            ]
+            "darobin/html-ruby#gh-pages": {
+                "description":  "A test specification to see if ReSpec integration works well."
+            }
           }
         </script>
       </section>
@@ -159,37 +154,27 @@
     <section>
       <h2 id="how" class="no-num">How this works</h2>
       <p>
-        Web Platform specifications an be available in one of three states:
+        Specifications get added to this document through
+        <a href="https://github.com/webspecs/the-index">pull requests</a>. If you wish to publish a
+        fork of an existing specification, simply add an entry to the
+        <code>&lt;script type="application/webspec+json"></code> block you will find in the source.
+        The key to the object is structured as <code>username/reponame#branch</code>, and its value
+        is an object with at least a <code>description</code> key. Keep it short and simple; as well
+        as respectful of the other forks.
       </p>
-      <dl>
-        <dt>master</dt>
-        <dd>
-          For a given specification, the content of the master branch corresponds to technology that
-          has been shown to be stable and interoperable, through testing. This does not mean that it
-          is perfect. A specification can be merged into master whenever there are 1) roughly enough
-          tests to get a good feel for how well something works, 2) roughly enough of them pass in a
-          few implementations. These points are deliberately fuzzy. The idea is that there should not
-          be a strict levels for any of those aspects as those tend to lead people to aim for the
-          level rather than think about what's good for the project. This is meant to be a
-          judgement call.
-        </dd>
-        <dt>develop</dt>
-        <dd>
-          The develop branch is the branch into which proposals are integrated, and which is then used
-          to produce master when testing is sufficient. A proposal can be merged into develop when
-          there is clear implementation interest (as exemplified by a couple of implementers starting
-          actual work to support the proposal). As for master, merging a proposal into develop is
-          meant to be a judgement call.
-        </dd>
-        <dt>proposals</dt>
-        <dd>
-          Here, anything goes. There can be many proposals for a given specification, and some might
-          be completely crazy. That is okay, it is meant to be an area for creativity.
-        </dd>
-      </dl>
       <p>
-        Specifications get added to this document through pull requests. The full approach is
-        described in <a href='/docs/'>the project documentation</a>.
+        In addition to the <code>description</code> key, if your file name is not 
+        <code>index.bs</code> (for Bikeshed) or <code>index.src.html</code> (for ReSpec) you can set
+        the <code>fileName</code> field to the base name you are using (without the extension). Note
+        however that this is <strong>strongly</strong> discouraged, and that the publication will
+        always output to <code>index.html</code>. The feature is essentially available to
+        repositories that have a pre-WebSpecs history and need to remain compatible with a previous
+        setup for some reason.
+      </p>
+      <p>
+        If you are creating a new WebSpec from scratch (as opposed to forking one) then you will
+        want to make a completely new section. Simply copy from an existing one and try to place
+        it somewhere logical in the document.
       </p>
       <div class=example>
           Each specification listed here follows the same template outlined below.
@@ -201,33 +186,32 @@
   &lt;/p&gt;
   &lt;script type=&quot;application/webspec+json&quot;&gt;
   {
-    "master":   null
-  , "develop":  null
-  , "proposals": [
-      {
-        "repository":   &quot;darobin/example-spec&quot;
-      , "branch":       &quot;with-toaster&quot;
-      , "description":  &quot;Examples are always better with toasters. This part here explains what is special about the proposal.&quot;
-      }
-    , {
-        "repository":   &quot;sideshowbarker/example-spec&quot;
-      , "branch":       &quot;more-fun&quot;
-      , "description":  &quot;This wasn&#x27;t fun enough. I spruced it up.&quot;
-      }
-    ]
+    "darobin/example-spec#with-toaster": {
+        "description":  "Examples are always better with toasters. This part here explains what is special about the proposal."
+    }
+  , "sideshowbarker/example-spec#more-fun": {
+        "description":  "This wasn't fun enough so I spruced it up."
+    }
   }
   &lt;/script&gt;
 &lt;/section&gt;
         </pre>
       </div>
+      <p>
+        When your PR is reviewed, in order to ensure that your fork is automatically published
+        whenever you make changes to it you just need to create a Web hook in your GitHub repository
+        that points to <code>http://publican.berjon.com/hook</code>. Once your PR is accepted, the
+        WebSpecs index will be updated and your specification will be published (and republished
+        automatically if you’ve got the hook setup).
+      </p>
     </section>
 
     <section>
-      <h2 class="no-num" id="cc0">Copyright</h2>
+      <h2 class="no-num" id="w3c">Copyright</h2>
       <p>
-        The contributors to this specification have waived all copyright and related or neighbouring
-        rights to this work worldwide under copyright law, including all related and neighbouring 
-        rights, to the extent allowed by law.
+        All contributions to this document are made under the <a
+        href="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231">W3C Software
+        License and Notice</a>.
       </p>
     </section>
   </body>
